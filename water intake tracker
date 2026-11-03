@@ -1,0 +1,46 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int goal, glasses, total, remaining;
+
+    printf("====================================\n");
+    printf("       WATER INTAKE TRACKER\n");
+    printf("====================================\n");
+
+    printf("\nEnter your daily water goal in ml: ");
+    scanf("%d", &goal);
+
+    printf("Enter number of glasses of water consumed: ");
+    scanf("%d", &glasses);
+
+    total = glasses * 250;
+
+    remaining = goal - total;
+
+    printf("\n========== DAILY REPORT ==========\n");
+
+    printf("Daily Water Goal : %d ml\n", goal);
+
+    printf("Glasses Consumed : %d\n", glasses);
+
+    printf("Total Water Intake : %d ml\n", total);
+
+    if(total < goal)
+    {
+        printf("Remaining Water : %d ml\n", remaining);
+        printf("Status : Goal Not Completed\n");
+    }
+    else
+    {
+        printf("Status : Goal Completed!\n");
+        printf("Extra Water : %d ml\n", total - goal);
+    }
+
+    printf("\n====================================\n");
+    printf("       THANK YOU!\n");
+    printf("====================================\n");
+
+    return 0;
+}
